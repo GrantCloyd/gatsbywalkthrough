@@ -14,6 +14,7 @@ module.exports = {
          },
       },
       "gatsby-plugin-react-helmet",
+      "gatsby-plugin-mdx",
       "gatsby-plugin-sitemap",
       {
          resolve: "gatsby-plugin-manifest",
@@ -22,13 +23,6 @@ module.exports = {
          },
       },
       "gatsby-plugin-sharp",
-      {
-         resolve: "gatsby-source-filesystem",
-         options: {
-            name: `blog`,
-            path: `${__dirname}/blog`,
-         },
-      },
       "gatsby-transformer-sharp",
       {
          resolve: "gatsby-source-filesystem",
@@ -37,6 +31,13 @@ module.exports = {
             path: "./src/images/",
          },
          __key: "images",
+      },
+      {
+         resolve: "gatsby-source-filesystem",
+         options: {
+            name: `blog`,
+            path: `${__dirname}/blog`,
+         },
       },
    ],
 }

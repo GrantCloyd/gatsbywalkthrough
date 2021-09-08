@@ -11,6 +11,11 @@ import {
 const Layout = ({ pageTitle, children }) => {
    const data = useStaticQuery(graphql`
       query {
+         allMdx(sort: { order: DESC, fields: frontmatter___date }) {
+            nodes {
+               slug
+            }
+         }
          site {
             siteMetadata {
                title
